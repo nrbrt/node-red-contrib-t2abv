@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('TimeToTargetT',{
+        category: 'Distilling',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+	    targettemp: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"TimeToTargetT";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="TimeToTargetT">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+	<label for "node-input-targettemp"><i class="icon-tag"></i> Target Temperature</label>
+	<input type="text" id="node-input-targettemp" placeholder="In degrees Celsius">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="TimeToTargetT">
+    <p>This node calculates the time left to reach the target temperature when heating a liquid in seconds when fed the current temperature of that liquid every 60 seconds.</p>
+    <p>The target temperature can be set in the properties of the node or sent to the node by using the topic "targettemp", the current temperature needs the topic set to "temperature"</p>
+    <p>The time is calculated in seconds and the temperature is in degrees Celsius</p>
+</script>

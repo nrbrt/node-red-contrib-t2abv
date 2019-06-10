@@ -1,0 +1,34 @@
+<script type="text/javascript">
+    RED.nodes.registerType('TtoLiquidABV',{
+        category: 'Distilling',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+	    sensortype: {value:"",required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"TtoLiquidABV";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="TtoLiquidABV">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+	<label for="node-inputsensortype"><i class="icon-tag"></i> Sensor type</label>
+	<select type="text" id="node-input-sensortype" placeholder="Sensor Type">
+	<option value="smt172">smt172</option>
+	<option value="ds18b20">ds18b20</option>
+	</select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="TtoLiquidABV">
+    <p>This node calculates the ABV of a liquid ethanol/water mixture at a certain temperature and atmospheric pressure.</p>
+    <p>The node takes messages with either the topic 'temperature' or the topic 'pressure'.</p>
+    <p>The payload of temperature need to be in degrees Celsius and the payload of pressure in hPa.</p>
+</script>
