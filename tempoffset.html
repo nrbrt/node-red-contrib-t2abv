@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('TempOffset',{
+        category: 'Distilling',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            contextglobalvariable: {value:"",required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"TempOffset";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="TempOffset">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <p></p>
+        <p> What global variable contains the offset for your sensor? </p>
+        <label for "node-input-contextglobalvariable"><i class="icon-tag"></i> context.global.</label>
+	<input type="text" id="node-input-contextglobalvariable" placeholder="put your variable name here">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="TempOffset">
+    <p>This node does an temperature offset calculation for you, using a context.global variable that you can configure, that contains the offset for a certain sensor</p>
+</script>

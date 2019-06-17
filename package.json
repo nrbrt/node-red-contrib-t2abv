@@ -9,7 +9,8 @@
       "Azeotrope": "azeotrope.js",
       "TtoLiquidABV": "ttoliquidabv.js",
       "TtoVaporABV": "ttovaporabv.js",
-      "TimeToTargetT": "timetotargettemp.js"
+      "TimeToTargetT": "timetotargettemp.js",
+      "TempOffset": "tempoffset.js"
     }
   },
   "scripts": {
