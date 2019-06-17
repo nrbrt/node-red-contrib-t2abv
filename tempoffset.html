@@ -4,7 +4,8 @@
         color: '#a6bbcf',
         defaults: {
             name: {value:""},
-            contextglobalvariable: {value:"",required: true}
+            contextglobalvariable: {value:"",required: true},
+	    messageproperty: {value:"payload", required: true}
         },
         inputs:1,
         outputs:1,
@@ -23,9 +24,14 @@
         <p> What global variable contains the offset for your sensor? </p>
         <label for "node-input-contextglobalvariable"><i class="icon-tag"></i> context.global.</label>
 	<input type="text" id="node-input-contextglobalvariable" placeholder="put your variable name here">
+        <p></p>
+        <p> What msg property contains the temperature that you want the offset applied to? </p>
+        <label for "node-input-messageproperty"><i class="icon-tag"></i> msg.</label>
+	<input type="text" id="node-input-messageproperty" placeholder="put the msg property name here">
     </div>
 </script>
 
 <script type="text/x-red" data-help-name="TempOffset">
     <p>This node does an temperature offset calculation for you, using a context.global variable that you can configure, that contains the offset for a certain sensor</p>
+    <p>You can define the msg property that the offset needs to be applied to. Default is msg.payload.</p>
 </script>
