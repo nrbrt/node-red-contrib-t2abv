@@ -6,8 +6,8 @@ module.exports = function(RED) {
         var node = this;
         node.on('input', function(msg) {
             var offset = this.context().global.get(this.contextglobalvariable)||0;
-            var temp = parseFloat(msg[this.messageproperty]);
-	    msg.payload = temp + offset;
+            var temp = parseFloat(msg[this.messageproperty]||0);
+	    msg.payload = Number(temp) + Number(offset);
             node.send(msg);
         });
     }
