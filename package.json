@@ -10,7 +10,9 @@
       "TtoLiquidABV": "ttoliquidabv.js",
       "TtoVaporABV": "ttovaporabv.js",
       "TimeToTargetT": "timetotargettemp.js",
-      "TempOffset": "tempoffset.js"
+      "TempOffset": "tempoffset.js",
+      "PowerLevel": "powerlevel.js",
+      "GPIO": "gpio.js"
     }
   },
   "scripts": {
@@ -24,6 +26,7 @@
   "author": "shinobit",
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "exec-sh": "^0.3.2",
     "ttoabv": "^2.3.0"
   }
 }

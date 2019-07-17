@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('GPIO',{
+        category: 'Distilling',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"GPIO";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="GPIO">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <p></p>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="GPIO">
+    <p>This node reads and writes GPIO on/off signals. The msg.payload determines what is does. "3,1" switches GPIO3 on, "3,0" switches GPIO3 off. "3" reads the current state of GPIO3.</p>
+    <p>The pin is selected by using the GPIO number, NOT the fysical pin number on the connector!</p>
+    <p>Possible errors are sent to the log and to msg.error.</p>
+    <p>This module depends on pigpiod running on your system! Please install, enable and start it like this:</p>
+    <p>sudo apt install pigpio; sudo systemctl enable pigpiod; sudo systemctl start pigpiod</p>
+</script>

@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('PowerLevel',{
+        category: 'Distilling',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            gpionumber: {value:"",required: true},
+	    frequency: {value:"", required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"PowerLevel";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="PowerLevel">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <p></p>
+        <p> Define the global varaible containing the GPIO number </p>
+        <label for "node-input-gpionumber"><i class="icon-tag"></i> context.global.</label>
+	<input type="text" id="node-input-gpionumber" placeholder="put your global variable here">
+        <p></p>
+        <p> Define the global variable containing the frequency of the pwm signal in Hz </p>
+        <label for "node-input-frequency"><i class="icon-tag"></i> context.global.</label>
+	<input type="text" id="node-input-frequency" placeholder="put your global variable here">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="PowerLevel">
+    <p>This node takes care of your powermanagement, using an SSR connected to a suitable pin on your pi by sending it a pwm signal with a fixed frequency and variable dutycycle.</p>
+    <p>Please make sure your pi can do hardware pwm on the GPIO that you select and select an appropiate frequency. A good choice for GPIO is 18. 12,13 and 19 are also possible on some models of Pi.</p>
+    <p>You can select a GPIO and frequency by setting two global variables. The pin is selected by using the GPIO number, NOT the fysical pin number on the connector! The frequency is defined in Hz (1 - 30000000 Hz)</p>
+    <p>Possible errors are sent to the log and to msg.error.</p>
+    <p>This module depends on pigpiod running on your system! Please install, enable and start it like this:</p>
+    <p>sudo apt install pigpio; sudo systemctl enable pigpiod; sudo systemctl start pigpiod</p>
+</script>
