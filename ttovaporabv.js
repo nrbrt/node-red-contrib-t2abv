@@ -14,8 +14,8 @@ module.exports = function(RED) {
 		nodeContext.set('pressure',  msg.payload);
 	    }
 	    
-	    var temperature = nodeContext.get('temperature')||0;
-	    var pressure = nodeContext.get('pressure')||0;
+	    var temperature = Number(nodeContext.get('temperature'))||0;
+	    var pressure = Number(nodeContext.get('pressure'))||0;
 
 	    if(temperature && pressure){
 		if(node.sensortype === "smt172"){
