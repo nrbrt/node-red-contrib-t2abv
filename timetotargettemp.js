@@ -36,7 +36,11 @@ module.exports = function(RED) {
 		    msg.payload = result;
 		    this.status({fill:"green",shape:"dot",text:"time left "+msg.payload+" seconds"});
 		    
-		}		
+		}
+		if(result >= 0 && result > 36000){
+		    msg.payload = 0;
+		    this.status({fill:"green",shape:"dot",text:"time left "+msg.payload+" seconds"});
+		}    		
         	node.send(msg);
     	    }    
         });
