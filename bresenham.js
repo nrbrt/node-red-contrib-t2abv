@@ -12,10 +12,12 @@ module.exports = function(RED) {
           if (regerror <= 0){
             this.context.regerror = regerror+regmax;
             msg.payload = 1;
+            node.status({fill:"red",shape:"dot",text:"1"})
             node.send(msg);
           }else{
             this.context.regerror = regerror;
             msg.payload = 0;
+            node.status({fill:"white",shape:"dot",text:"0"})
             node.send(msg);
           }
 
