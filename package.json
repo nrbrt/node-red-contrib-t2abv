@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-t2abv",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "description": "A collection of nodes that can be used to calculate several alcohol distilling related numbers",
   "main": "index.js",
   "node-red": {
