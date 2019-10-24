@@ -1,0 +1,25 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Bresenham',{
+        category: 'Distilling',
+        color: '#a6bbcf',
+        defaults: {},
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"Bresenham";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Bresenham">
+    <div class="form-row">
+        <p> Bresenham algorithm implementation </p>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Bresenham">
+    <p>This node takes care of translating an analog level to a digital on/off output, distributing it evenly over time.</p>
+    <p>It is particularly useful when using a solenoid to control a flow or when you do not want to use pwm to control en heating element.</p>
+    <p>The node will output "1" or "0" for on and off. It takes a level in whole percentages as input. The frequency will be determined by the frequency with which you send messages to this node. This is easily achieved by using a trigger node for example.</p>
+</script>

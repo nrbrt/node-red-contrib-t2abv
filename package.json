@@ -12,7 +12,8 @@
       "TimeToTargetT": "timetotargettemp.js",
       "TempOffset": "tempoffset.js",
       "PowerLevel": "powerlevel.js",
-      "GPIO": "gpio.js"
+      "GPIO": "gpio.js",
+      "Bresenham": "bresenham.js"
     }
   },
   "scripts": {
