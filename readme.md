@@ -31,6 +31,7 @@ Bresenham: Distributes pulses evenly over time, based on the Bresenham algorithm
 
 
 You might also be interested in a couple of other programs that I wrote for both Raspberry Pi and Arduino, in combination with the above:
+
 smt172-nano-needlevalve: uses a nano to communicate the smt172 temperature data to the Pi and controls a needlevalve mechanism.
 
 smt172-nano-peristalticpump: the same as above, except that it uses a peristaltic pump.
