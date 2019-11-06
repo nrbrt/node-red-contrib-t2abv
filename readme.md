@@ -9,10 +9,10 @@
 * **Azeotrope**:  calculates the Azeotrope temperature of ethanol.
 
 
-* **TtoLiquidABV**: calculates the ABV of a liquid, based on temperature of that liquid and the current atmospheric pressure. Different lookup tables are used for ds18b20 and smt172 sensors (smt172 connected to a seperate nano) and can be defined in the settings.
+* **TtoLiquidABV**: calculates the ABV of a liquid, based on temperature of that liquid and the current atmospheric pressure. Different lookup tables are used for ds18b20 and smt172 sensors (smt172 connected to a separate nano) and can be defined in the settings.
 
 
-* **TtoVaporABV**:  does the same for ethanol vapor. Also seperate lookup tables for ds18b20 and smt172 sensors (smt172 connected to a seperate nano).
+* **TtoVaporABV**:  does the same for ethanol vapor. Also separate lookup tables for ds18b20 and smt172 sensors (smt172 connected to a separate nano).
 
 
 * **TimeToTargetT**: calculates an estimated time to reach a given temperature, based on a temperature measurement of a liquid every 60s.
@@ -27,8 +27,10 @@
 * **GPIO**: Dynamic configurable GPIO reader/writer and also uses pigpiod.
 
 
-* **Bresenham**: Distributes pulses evenly over time, based on the Bresenham algorithm. This can be used to control power with an SSR or for controlling the flow through a solenoid. Analog control for a digital proces.
+* **Bresenham**: Distributes pulses evenly over time, based on the Bresenham algorithm. This can be used to control power with an SSR or for controlling the flow through a solenoid. Analog control for a digital process.
 
+
+* **TtoRGB**: This will add some bling to your still. It converts a temperature to a color in an free definable color range.
 
 #### You might also be interested in a couple of other programs that I wrote for both Raspberry Pi and Arduino, in combination with the above that can be found on github:
 
@@ -36,7 +38,7 @@
 
 * **smt172-nano-peristalticpump**: the same as above, except that it uses a peristaltic pump.
 
-* **ds18b20-service**: I noticed that Node-RED is a bit slow with the temperature measurement, so I wrote a daemon that runs in the background and uses MQTT to communicate the meassurements and hardware addresses of the sensors.
+* **ds18b20-service**: I noticed that Node-RED is a bit slow with the temperature measurement, so I wrote a daemon that runs in the background and uses MQTT to communicate the measurements and hardware addresses of the sensors.
 
 * **bmp280-service**: the same as above, but for a bmp(e)280 atmospheric pressure sensor.
 
