@@ -13,7 +13,8 @@
       "TempOffset": "tempoffset.js",
       "PowerLevel": "powerlevel.js",
       "GPIO": "gpio.js",
-      "Bresenham": "bresenham.js"
+      "Bresenham": "bresenham.js",
+      "TtoRGB": "rgb.js"
     }
   },
   "scripts": {
@@ -28,6 +29,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "exec-sh": "^0.3.2",
+    "gradient2": "^1.0.3",
     "ttoabv": "^2.3.0"
   }
 }

@@ -1,0 +1,25 @@
+<script type="text/javascript">
+    RED.nodes.registerType('TtoRGB',{
+        category: 'Distilling',
+        color: '#a6bbcf',
+        defaults: {},
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"TtoRGB";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="TtoRGB">
+    <div class="form-row">
+        <p> temperature to RGB color conversion </p>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="TtoRGB">
+    <p>This node produces RGB values out of a definable color range, based on temperature readings. It is particularly useful when adding some bling to your still.</p>
+    <p>It takes 3 kinds of msg.payload inputs: temperature, start color, end color. The temperature in Celsius, colors in RGB value arrays. The topics need to be: temperature, start_color and end_color.</p>
+    <p>The color range will be calculated starting at 20 degrees Celsius, so anything below that will stay the starting color of the range.</p>
+</script>
