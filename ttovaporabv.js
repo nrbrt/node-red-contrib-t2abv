@@ -20,7 +20,7 @@ module.exports = function(RED) {
 	    if(temperature && pressure){
 		if(node.sensortype === "smt172"){
 		    var abv = require('ttoabv');
-		    var result = abv.TtoVaporABV(abv.correctedH2O(temperature,pressure));
+		    var result = abv.TtoVaporABV(abv.correctedAzeo(temperature,pressure));
 		    if(result < 0){
 			msg.payload = -1;
 		    } else {
